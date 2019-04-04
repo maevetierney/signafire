@@ -1,6 +1,6 @@
 'use strict';
 // *ROUTING*
-vangular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.view1', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -10,6 +10,5 @@ vangular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', [function() {
-    
+
 }]);
-l
