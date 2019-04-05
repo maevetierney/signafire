@@ -7,22 +7,30 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--CSS -->
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+
+  <!-- Angular  -->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
+
+  <!-- app file and views -->
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+
+
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
@@ -30,6 +38,7 @@
   <!-- font from google fonts - open sans-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+  <title>Signafire Internship Challenge - Maeve Tierney</title>
 </head>
 <body>
 
@@ -38,12 +47,66 @@
         <p>MESSAGE VIEWER</p>
     </header>
 
-    <div ng-view></div>
 
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
+    <!-- <div ng-view></div> -->
+
+    <div class="starred-header-container">
+        <h2 class = "starred">Starred: </h2>
+    </div>
+
+    
+
+    </div>
+    <section class="section">
+        <div class="container">
+            <section class="content-section">
+
+                <div class="content-container">
+                    <div class="avatar-handle">
+                        <!--message avatar-->
+                        <img id = "avatar" src="/Users/maevetierney/Desktop/signafire/app/imgs/logo-sf-small.png" alt="test-img"/>
+
+                        <!--message handle aka author-->
+                        <p id="handle">
+                            author/handle
+                        </p>
+                    </div>
+
+                    <div class="source-timestamp-content">
+                        <div class="source-timestamp">
+                            <!--message source -->
+                            <p id = "source">
+                                source
+                            </p>
+                            <!--message timestamp -->
+                            <p id="timestamp">
+                                timestamp
+                            </p>
+                        </div>
+                        <!--message content-->
+                        <div class="content">
+                            content string
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="button-section">
+                <div class="button-container">
+                    <!--star button -->
+                    <button id = "star-button" type="button" name="star">
+                        Star Message!
+                    </button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- <ul class="menu">
+        <li><a href="#!/view1">view1</a></li>
+        <li><a href="#!/view2">view2</a></li>
+    </ul> -->
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
