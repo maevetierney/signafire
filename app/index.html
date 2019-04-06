@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +27,7 @@
 
   <!-- app file and views -->
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+
 
 
   <script src="core/version/version.js"></script>
@@ -43,7 +42,7 @@
 <body>
 
     <header>
-        <img src="/Users/maevetierney/Desktop/signafire/app/imgs/logo-sf-small.png" alt="Signafire" id="logo"/>
+        <img src="imgs/logo-sf-small.png" alt="Signafire" id="logo"/>
         <p>MESSAGE VIEWER</p>
     </header>
 
@@ -54,54 +53,51 @@
         <h2 class = "starred">Starred: </h2>
     </div>
 
-    
+    <div ng-app = "myApp" ng-controller="myController" >
 
+        <section class="section" ng-repeat="msg in messages">
+            <div class="container">
+                <section class="content-section">
+                    <div class="content-container">
+                        <div class="avatar-handle" >
+                            <!--message avatar-->
+                            <img id = "avatar" src="imgs/logo-sf-small.png" alt="test-img"/>
+
+                            <!--message handle aka author-->
+                            <p id="handle">
+                                {{msg.handle}}
+                            </p>
+                        </div>
+
+                        <div class="source-timestamp-content">
+                            <div class="source-timestamp">
+                                <!--message source -->
+                                <p id = "source">
+                                    source
+                                </p>
+                                <!--message timestamp -->
+                                <p id="timestamp">
+                                    timestamp
+                                </p>
+                            </div>
+                            <!--message content-->
+                            <div class="content">
+                                content string
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="button-section">
+                    <div class="button-container">
+                        <!--star button -->
+                        <button id = "star-button" type="button" name="star">
+                            Star Message!
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
     </div>
-    <section class="section">
-        <div class="container">
-            <section class="content-section">
-
-                <div class="content-container">
-                    <div class="avatar-handle">
-                        <!--message avatar-->
-                        <img id = "avatar" src="/Users/maevetierney/Desktop/signafire/app/imgs/logo-sf-small.png" alt="test-img"/>
-
-                        <!--message handle aka author-->
-                        <p id="handle">
-                            author/handle
-                        </p>
-                    </div>
-
-                    <div class="source-timestamp-content">
-                        <div class="source-timestamp">
-                            <!--message source -->
-                            <p id = "source">
-                                source
-                            </p>
-                            <!--message timestamp -->
-                            <p id="timestamp">
-                                timestamp
-                            </p>
-                        </div>
-                        <!--message content-->
-                        <div class="content">
-                            content string
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="button-section">
-                <div class="button-container">
-                    <!--star button -->
-                    <button id = "star-button" type="button" name="star">
-                        Star Message!
-                    </button>
-                </div>
-            </section>
-        </div>
-    </section>
-
 
     <!-- <ul class="menu">
         <li><a href="#!/view1">view1</a></li>
